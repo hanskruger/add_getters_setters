@@ -70,8 +70,9 @@ With this code, these methods would be generared for you...
 		    self.speed // implicit copy here
 	    }
 	    
-	    pub fn set_speed(&mut self, v: i16) {
+	    pub fn set_speed(&mut self, v: i16) -> &Self {
 		    self.speed = v;
+            self
 	    }
 	    
 	    pub fn with_speed(mut self, v: i16) -> Self {
